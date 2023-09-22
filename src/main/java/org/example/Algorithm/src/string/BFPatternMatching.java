@@ -40,7 +40,6 @@ public class BFPatternMatching {
 
 
     // qwertyuiuiuytrertyuiopopoiuytrqwertyuytrertywqwertyuiuytrewqwertyuiiuiuiytrewert
-    // qwert
     public static void main(String[] args) throws IOException {
         new BFPatternMatching().solution();
     }

@@ -7,7 +7,9 @@ public class P18258 {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        //반복 횟수
         int length = Integer.parseInt(br.readLine());
+
         //값을 넣을 리스트생성
         LinkedList<Integer> list = new LinkedList<>();
 
@@ -45,6 +47,7 @@ public class P18258 {
             }
         }
 
+        //값 출력
         System.out.println(sb.toString());
 
 

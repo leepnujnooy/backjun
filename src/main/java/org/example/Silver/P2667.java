@@ -56,7 +56,6 @@ public class P2667 {
             String[] temp = sc.nextLine().split("");
             for (int j = 0; j < temp.length; j++) {
                 graph[i][j] = Integer.parseInt(temp[j]);
-
             }
         }
 

@@ -13,32 +13,28 @@ public class P15664 {
     static int[] temp;
     static int[] num;
     static String str = "";
-    static String tempLine = "";
 
     void DFS(int depth){
         if(depth == m){
             for (int i : temp) {
-                tempLine += i + " ";
+                sb.append(i).append(" ");
             }
-            if(!str.contains(tempLine)){
-                str += tempLine + "\n";
-                tempLine = "";
+            if(!str.contains(sb.toString())){
+                str += sb.toString();
+                str += "\n";
+                sb.setLength(0);
                 return;
             }
             else{
-                tempLine = "";
+                sb.setLength(0);
                 return;
             }
         }
 
         for (int i = 0; i < n; i++) {
             if(!isVisit[i]){
-                isVisit[i] = true;
                 temp[depth] = num[i];
                 DFS(depth+1);
-                for (int j = i+1; j < n; j++) {
-                    isVisit[j] = false;
-                }
             }
         }
 

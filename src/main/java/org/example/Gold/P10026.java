@@ -10,8 +10,12 @@ public class P10026 {
     static int common,jaeJun = 0;
     static int size;
 
+    boolean isInArea(int x, int y){
+        return x < size && x >= 0 && y < size && y >= 0;
+    }
+
     boolean redDFS(int x, int y){
-        if(x >= size || x<0 || y>= size || y<0){
+        if(!isInArea(x,y)){
             return false;
         }
 
@@ -27,7 +31,7 @@ public class P10026 {
     }
 
     boolean greenDFS(int x, int y){
-        if(x >= size || x<0 || y>= size || y<0){
+        if(!isInArea(x,y)){
             return false;
         }
 
@@ -42,7 +46,7 @@ public class P10026 {
         return false;
     }
     boolean blueDFS(int x, int y){
-        if(x >= size || x<0 || y>= size || y<0){
+        if(isInArea(x,y)){
             return false;
         }
 
@@ -60,7 +64,7 @@ public class P10026 {
 
 
     boolean jaeJunDFS(int x, int y){
-        if(x >= size || x<0 || y>= size || y<0){
+        if(!isInArea(x,y)){
             return false;
         }
 
@@ -113,9 +117,5 @@ public class P10026 {
         System.out.printf("%d %d",common,jaeJun);
 
     }
-
-
-
-
 
 }
